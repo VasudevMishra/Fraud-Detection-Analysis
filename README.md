@@ -1,49 +1,57 @@
-# Online Payments Fraud Detection
+## Fraud Detection Analysis Project
 
-This repository contains a machine learning project aimed at detecting fraudulent transactions in online payments using various classification algorithms. The dataset used is sourced from Kaggle, and the project explores different models to identify the best-performing algorithm.
+### Table of Contents
+1. [Overview](#overview)
+2. [Data Preprocessing](#data-preprocessing)
+3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+4. [Model Training and Evaluation](#model-training-and-evaluation)
+5. [Results](#results)
+6. [Conclusion](#conclusion)
+7. [Future Work](#future-work)
+8. [Kaggle Dataset Link](#kaggle-dataset-link)
 
-## Project Overview
+### Overview
+This project aims to detect fraudulent online payments using a dataset from Kaggle. It involves data preprocessing, exploratory data analysis (EDA), training multiple machine learning models, and evaluating their performance.
 
-The primary goal of this project is to accurately predict whether a transaction is fraudulent or not, based on features such as transaction type, amount, and account balances.
+### Data Preprocessing
+1. **Import Libraries**: Necessary libraries for data manipulation, visualization, and modeling are imported.
+2. **Load Data**: The dataset is loaded into a pandas DataFrame.
+3. **Data Cleaning**: Missing values are handled, and unnecessary columns are dropped.
+4. **Feature Encoding**: Categorical features are encoded for model compatibility.
 
-## Dataset
+### Exploratory Data Analysis (EDA)
+1. **Data Inspection**: Initial inspection of the dataset to understand its structure, shape, and data types.
+2. **Missing Values Check**: Verification of missing values and appropriate handling if found.
+3. **Outlier Detection**: Visualized using box plots to identify any outliers in the dataset.
+4. **Feature Distribution**: Count plots to analyze the distribution of different categories within the 'type' feature.
+5. **Correlation Analysis**: Heatmap to visualize the correlation between different features.
+6. **Scatter Plot**: Relationship between 'oldbalanceOrg' and 'newbalanceOrig'.
 
-The dataset used in this project can be found on Kaggle:
-- [Online Payments Fraud Detection Dataset](https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset)
+### Model Training and Evaluation
+Three models are trained and evaluated:
+1. **Logistic Regression**
+2. **Decision Tree Classifier**
+3. **Naive Bayes**
 
-## Key Features
+#### Steps:
+1. **Data Splitting**: The dataset is split into training and testing sets.
+2. **Data Standardization**: Features are scaled using StandardScaler.
+3. **Model Training**: Each model is trained on the scaled training data.
+4. **Model Evaluation**: Performance metrics (accuracy, precision, recall, F1 score, ROC-AUC) are calculated. Confusion matrices and classification reports are generated for each model.
 
-- **Data Preprocessing:** Cleaned the dataset by handling missing values and mapping categorical variables to numerical values.
-- **Exploratory Data Analysis:** Conducted an analysis to understand the distribution of transaction types and the occurrence of fraud.
-- **Modeling:** Implemented multiple machine learning models, including Logistic Regression, Decision Trees, K-Nearest Neighbors, Naive Bayes, and Support Vector Machines, to classify transactions.
-- **Evaluation:** Compared the performance of the models using cross-validation and selected the best model based on accuracy.
+### Results
+- **Logistic Regression**: Detailed performance metrics including accuracy, precision, recall, F1 score, and ROC-AUC score.
+- **Decision Tree Classifier**: Performance evaluation and visualization.
+- **Naive Bayes**: Evaluation and comparison with other models.
+- **Summary**: A comparison table and pie charts of the performance metrics for visual representation.
 
-## Models Used
+### Conclusion
+The project demonstrates the application of data preprocessing, EDA, and machine learning techniques to detect fraudulent transactions in online payments. The results highlight the effectiveness of different models and their comparative performance.
 
-- Logistic Regression
-- Decision Tree Classifier
-- K-Nearest Neighbors
-- Linear Discriminant Analysis
-- Naive Bayes
-- Support Vector Classifier
+### Future Work
+- Enhance feature engineering for better model performance.
+- Explore advanced models like ensemble methods.
+- Implement real-time fraud detection systems.
 
-## Results
-
-The project includes an evaluation of the models, showcasing the accuracy and standard deviation for each algorithm. The best-performing model was identified based on the results from cross-validation.
-
-## Conclusion
-
-This project demonstrates the process of building a fraud detection system using machine learning techniques. It highlights the importance of selecting the right model for accurate predictions.
-
-## How to Run
-
-To run this project on your local machine, follow these steps:
-
-1. Clone the repository
-2. Install the required libraries
-3. Load the dataset
-4. Execute the notebook
-
-## Acknowledgments
-
-- [Kaggle](https://www.kaggle.com/) for providing the dataset.
+### Kaggle Dataset Link
+The dataset used for this project can be found [here](https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset/data).
